@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First Django Class</title>
+  </head>
+  <body>
+    <h1>Authors</h1>
+    <p>Authors count: <b>{{ authors|length }}</b></p>
+    <b>Our selected authors:</b>
+    <ul>
+      {% for author_slug, author in authors.items %}
+        <li>{{ author.full_name }} - <a href="/author/{{ author_slug }}/">(Details)</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

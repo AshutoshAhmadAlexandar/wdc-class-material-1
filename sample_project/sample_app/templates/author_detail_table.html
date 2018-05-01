@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Author - {{ author.full_name }}</title>
+        <style media="screen">
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>{{ author.full_name }}</h1>
+        <div><img src="{{ author.picture }}" alt="{{ author.full_name }}" width="300px"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Born</th>
+              <th>Nationality</th>
+              <th>Notable Work</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ author.born }}</td>
+              <td>{{ author.nationality }}</td>
+              <td>{{ author.notable_work }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><a href="/">Back to Authors</a></p>
+    </body>
+</html>
